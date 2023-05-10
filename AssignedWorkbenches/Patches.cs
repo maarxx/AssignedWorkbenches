@@ -54,6 +54,30 @@ namespace AssignedWorkbenches
         }
     }
 
+    //RimWorld.WorkGiver_OperateScanner
+    //public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
+    [HarmonyPatch(typeof(WorkGiver_OperateScanner))]
+    [HarmonyPatch("JobOnThing")]
+    class Patch_WorkGiver_OperateScanner_JobOnThing
+    {
+        static bool Prefix(Pawn pawn, Thing t, bool forced)
+        {
+            return AssignedWorkbenchesComp.AllowedToWorkBench(pawn, t);
+        }
+    }
+
+    //RimWorld.WorkGiver_OperateScanner
+    //public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+    [HarmonyPatch(typeof(WorkGiver_OperateScanner))]
+    [HarmonyPatch("HasJobOnThing")]
+    class Patch_WorkGiver_OperateScanner_HasJobOnThing
+    {
+        static bool Prefix(Pawn pawn, Thing t, bool forced)
+        {
+            return AssignedWorkbenchesComp.AllowedToWorkBench(pawn, t);
+        }
+    }
+
     //RimWorld.WorkGiver_Researcher
     //public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
     [HarmonyPatch(typeof(WorkGiver_Researcher))]
