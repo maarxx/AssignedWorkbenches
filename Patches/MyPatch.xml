@@ -1,0 +1,69 @@
+<!-- Add /comps/li/compClass if there are no comps yet. -->
+<!-- Add /li/compClass to /comps if exists (i.e. other mod already added the comps field first) -->
+<Patch>
+  <Operation Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[@Name="BenchBase"]/comps</xpath>
+      <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[@Name="BenchBase"]</xpath>
+          <value>
+              <comps>
+                  <li>
+                      <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
+                  </li>
+              </comps>
+          </value>
+      </nomatch>
+      <match Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[@Name="BenchBase"]/comps</xpath>
+          <value>
+              <li>
+                  <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
+              </li>
+          </value>
+      </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName="CraftingSpot"]/comps</xpath>
+      <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="CraftingSpot"]</xpath>
+          <value>
+              <comps>
+                  <li>
+                      <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
+                  </li>
+              </comps>
+          </value>
+      </nomatch>
+      <match Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="CraftingSpot"]/comps</xpath>
+          <value>
+              <li>
+                  <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
+              </li>
+          </value>
+      </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName="ButcherSpot"]/comps</xpath>
+      <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="ButcherSpot"]</xpath>
+          <value>
+              <comps>
+                  <li>
+                      <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
+                  </li>
+              </comps>
+          </value>
+      </nomatch>
+      <match Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="ButcherSpot"]/comps</xpath>
+          <value>
+              <li>
+                  <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
+              </li>
+          </value>
+      </match>
+  </Operation>
+</Patch>
