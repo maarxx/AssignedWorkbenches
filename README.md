@@ -12,6 +12,7 @@ We're on Steam:
 
 * [Introduction](#introduction)
 * [Links](#links)
+* [Explanation](#explanation)
 
 # Introduction
 
@@ -30,3 +31,7 @@ We're on Steam:
 We're on GitHub: https://github.com/maarxx/AssignedWorkbenches
 
 For reporting bugs or requesting features, Github Issues are better than Steam Workshop Comments.
+
+# Explanation
+
+![Preview of Gizmo](./About/Preview.png)
