@@ -24,7 +24,7 @@ Multiple pawns can be assigned at once.
 
 # Links
 
-We're on Steam: 
+We're on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2973942644
 
 We're on GitHub: https://github.com/maarxx/AssignedWorkbenches
 
