@@ -6,8 +6,6 @@ The mod adds the 'Set Owner' Gizmo (like from a Bed) onto all Workbenches.
 
 Pawns will not work on the bench unless they are assigned to it.
 
-We're on Steam: 
-
 # Table of Contents
 
 * [Introduction](#introduction)
