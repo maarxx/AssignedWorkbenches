@@ -7,7 +7,7 @@
           <xpath>/Defs/ThingDef[@Name="BenchBase"]</xpath>
           <value>
               <comps>
-                  <li>
+                  <li Class="CompProperties_AssignableToPawn">
                       <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
                   </li>
               </comps>
@@ -16,7 +16,7 @@
       <match Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[@Name="BenchBase"]/comps</xpath>
           <value>
-              <li>
+              <li Class="CompProperties_AssignableToPawn">
                   <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
               </li>
           </value>
@@ -29,7 +29,7 @@
           <xpath>/Defs/ThingDef[defName="CraftingSpot"]</xpath>
           <value>
               <comps>
-                  <li>
+                  <li Class="CompProperties_AssignableToPawn">
                       <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
                   </li>
               </comps>
@@ -38,7 +38,7 @@
       <match Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="CraftingSpot"]/comps</xpath>
           <value>
-              <li>
+              <li Class="CompProperties_AssignableToPawn">
                   <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
               </li>
           </value>
@@ -51,7 +51,7 @@
           <xpath>/Defs/ThingDef[defName="ButcherSpot"]</xpath>
           <value>
               <comps>
-                  <li>
+                  <li Class="CompProperties_AssignableToPawn">
                       <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
                   </li>
               </comps>
@@ -60,7 +60,7 @@
       <match Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="ButcherSpot"]/comps</xpath>
           <value>
-              <li>
+              <li Class="CompProperties_AssignableToPawn">
                   <compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
               </li>
           </value>
