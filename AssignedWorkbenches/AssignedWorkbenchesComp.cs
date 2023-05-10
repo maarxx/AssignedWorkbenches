@@ -10,6 +10,23 @@ namespace AssignedWorkbenches
 {
     public class AssignedWorkbenchesComp : CompAssignableToPawn
     {
-        // This space intentionally left blank.
+        public static bool AllowedToWorkBench(Pawn pawn, Thing thing)
+        {
+            CompAssignableToPawn awbc = thing.TryGetComp<AssignedWorkbenchesComp>();
+            if (awbc != null)
+            {
+                List<Pawn> assignedPawns = awbc.AssignedPawnsForReading;
+                if (assignedPawns.Count == 0)
+                {
+                    return true;
+                }
+                else if (assignedPawns.Contains(pawn))
+                {
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
     }
 }

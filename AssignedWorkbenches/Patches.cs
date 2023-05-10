@@ -18,30 +18,63 @@ namespace AssignedWorkbenches
         }
     }
 
-    // RimWorld.WorkGiver_DoBill
+    //RimWorld.WorkGiver_DoBill
     //public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
     [HarmonyPatch(typeof(WorkGiver_DoBill))]
     [HarmonyPatch("JobOnThing")]
     class Patch_WorkGiver_DoBill_JobOnThing
     {
-        static bool Prefix(WorkGiver_DoBill __instance, Pawn pawn, Thing thing, bool forced, Job __result)
+        static bool Prefix(Pawn pawn, Thing thing, bool forced)
         {
-            CompAssignableToPawn awbc = thing.TryGetComp<AssignedWorkbenchesComp>();
-            if (awbc != null)
-            {
-                List<Pawn> assignedPawns = awbc.AssignedPawnsForReading;
-                if (assignedPawns.Count == 0)
-                {
-                    return true;
-                }
-                else if (assignedPawns.Contains(pawn))
-                {
-                    return true;
-                }
-                __result = null;
-                return false;
-            }
-            return true;
+            return AssignedWorkbenchesComp.AllowedToWorkBench(pawn, thing);
+        }
+    }
+
+    //RimWorld.WorkGiver_CreateXenogerm
+    //public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
+    [HarmonyPatch(typeof(WorkGiver_CreateXenogerm))]
+    [HarmonyPatch("JobOnThing")]
+    class Patch_WorkGiver_CreateXenogerm_JobOnThing
+    {
+        static bool Prefix(Pawn pawn, Thing t, bool forced)
+        {
+            return AssignedWorkbenchesComp.AllowedToWorkBench(pawn, t);
+        }
+    }
+
+    //RimWorld.WorkGiver_CreateXenogerm
+    //public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+    [HarmonyPatch(typeof(WorkGiver_CreateXenogerm))]
+    [HarmonyPatch("HasJobOnThing")]
+    class Patch_WorkGiver_CreateXenogerm_HasJobOnThing
+    {
+        static bool Prefix(Pawn pawn, Thing t, bool forced)
+        {
+            return AssignedWorkbenchesComp.AllowedToWorkBench(pawn, t);
+        }
+    }
+
+    //RimWorld.WorkGiver_Researcher
+    //public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
+    [HarmonyPatch(typeof(WorkGiver_Researcher))]
+    [HarmonyPatch("JobOnThing")]
+    class Patch_WorkGiver_Researcher_JobOnThing
+    {
+        static bool Prefix(Pawn pawn, Thing t, bool forced)
+        {
+            return AssignedWorkbenchesComp.AllowedToWorkBench(pawn, t);
+        }
+    }
+
+    //RimWorld.WorkGiver_Researcher
+    //public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+    [HarmonyPatch(typeof(WorkGiver_Researcher))]
+    [HarmonyPatch("HasJobOnThing")]
+    class Patch_WorkGiver_Researcher_HasJobOnThing
+    {
+        static bool Prefix(Pawn pawn, Thing t, bool forced)
+        {
+            return AssignedWorkbenchesComp.AllowedToWorkBench(pawn, t);
         }
     }
 }
