@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using Verse;
 
 namespace AssignedWorkbenches
 {
-    public class AssignedWorkbenchesComp : ThingComp
+    public class AssignedWorkbenchesComp : CompAssignableToPawn
     {
         // This space intentionally left blank.
     }
