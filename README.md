@@ -4,8 +4,6 @@ This is a mod for the game RimWorld by Ludeon Studios.
 
 The mod adds the 'Set Owner' Gizmo (like from a Bed) onto all Workbenches.
 
-Pawns will not work on the bench unless they are assigned to it.
-
 # Table of Contents
 
 * [Introduction](#introduction)
@@ -16,11 +14,13 @@ Pawns will not work on the bench unless they are assigned to it.
 
 The mod adds the 'Set Owner' Gizmo (like from a Bed) onto all Workbenches.
 
-Pawns will not work on the bench unless they are assigned to it.
+Pawns can be explicitly assigned to the workbench. Multiple pawns can be assigned to the same bench.
 
-This works separately from the bill restrictions, so make sure bills are not assigned to someone else.
+If no pawns are assigned (default), then anybody can work the bench (default).
 
-Multiple pawns can be assigned at once.
+But if any pawns are assigned, then only those assigned pawns can work the bench.
+
+This works independently from the bill restrictions, so make sure bills are not assigned to someone else.
 
 # Links
 
@@ -33,3 +33,39 @@ For reporting bugs or requesting features, Github Issues are better than Steam W
 # Explanation
 
 ![Preview of Gizmo](./About/Preview.png)
+
+The mod currently targets all of the following:
+
+For benches:
+* Anything inheriting from \<ThingDef ParentName="BenchBase">:
+  * \<defName>SubcoreEncoder\</defName>
+  * \<defName>TableSculpting\</defName>
+  * \<defName>TableButcher\</defName>
+  * \<defName>HandTailoringBench\</defName>
+  * \<defName>ElectricTailoringBench\</defName>
+  * \<defName>FueledSmithy\</defName>
+  * \<defName>ElectricSmithy\</defName>
+  * \<defName>TableMachining\</defName>
+  * \<defName>ElectricStove\</defName>
+  * \<defName>FueledStove\</defName>
+  * \<defName>TableStonecutter\</defName>
+  * \<defName>Brewery\</defName>
+  * \<defName>DrugLab\</defName>
+  * \<defName>ElectricSmelter\</defName>
+  * \<defName>BiofuelRefinery\</defName>
+  * \<defName>FabricationBench\</defName>
+  * \<defName>SimpleResearchBench\</defName>
+  * \<defName>HiTechResearchBench\</defName>
+* Manually patched:
+  * defName="GeneAssembler"
+  * defName="LongRangeMineralScanner"
+  * defName="GroundPenetratingScanner"
+  * defName="CraftingSpot"
+  * defName="ButcherSpot"
+
+For WorkGivers:
+* Anything inheriting from WorkGiver_DoBill
+* Manually patched:
+  * WorkGiver_CreateXenogerm
+  * WorkGiver_OperateScanner
+  * WorkGiver_Researcher
