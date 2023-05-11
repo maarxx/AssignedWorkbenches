@@ -37,33 +37,36 @@ For reporting bugs or requesting features, Github Issues are better than Steam W
 The mod currently targets all of the following:
 
 For benches:
+
 * Anything inheriting from \<ThingDef ParentName="BenchBase">:
-  * \<defName>SubcoreEncoder\</defName>
-  * \<defName>TableSculpting\</defName>
-  * \<defName>TableButcher\</defName>
-  * \<defName>HandTailoringBench\</defName>
-  * \<defName>ElectricTailoringBench\</defName>
-  * \<defName>FueledSmithy\</defName>
-  * \<defName>ElectricSmithy\</defName>
-  * \<defName>TableMachining\</defName>
-  * \<defName>ElectricStove\</defName>
-  * \<defName>FueledStove\</defName>
-  * \<defName>TableStonecutter\</defName>
-  * \<defName>Brewery\</defName>
-  * \<defName>DrugLab\</defName>
-  * \<defName>ElectricSmelter\</defName>
-  * \<defName>BiofuelRefinery\</defName>
-  * \<defName>FabricationBench\</defName>
-  * \<defName>SimpleResearchBench\</defName>
-  * \<defName>HiTechResearchBench\</defName>
+  * SubcoreEncoder
+  * TableSculpting
+  * TableButcher
+  * HandTailoringBench
+  * ElectricTailoringBench
+  * FueledSmithy
+  * ElectricSmithy
+  * TableMachining
+  * ElectricStove
+  * FueledStove
+  * TableStonecutter
+  * Brewery
+  * DrugLab
+  * ElectricSmelter
+  * BiofuelRefinery
+  * FabricationBench
+  * SimpleResearchBench
+  * HiTechResearchBench
+
 * Manually patched:
-  * defName="GeneAssembler"
-  * defName="LongRangeMineralScanner"
-  * defName="GroundPenetratingScanner"
-  * defName="CraftingSpot"
-  * defName="ButcherSpot"
+  * GeneAssembler
+  * LongRangeMineralScanner
+  * GroundPenetratingScanner
+  * CraftingSpot
+  * ButcherSpot
 
 For WorkGivers:
+
 * Anything inheriting from WorkGiver_DoBill
 * Manually patched:
   * WorkGiver_CreateXenogerm
