@@ -4,8 +4,6 @@ This is a mod for the game RimWorld by Ludeon Studios.
 
 The mod adds the 'Set Owner' Gizmo (like from a Bed) onto all Workbenches.
 
-Pawns will not work on the bench unless they are assigned to it.
-
 # Table of Contents
 
 * [Introduction](#introduction)
@@ -16,11 +14,13 @@ Pawns will not work on the bench unless they are assigned to it.
 
 The mod adds the 'Set Owner' Gizmo (like from a Bed) onto all Workbenches.
 
-Pawns will not work on the bench unless they are assigned to it.
+Pawns can be explicitly assigned to the workbench. Multiple pawns can be assigned to the same bench.
 
-This works separately from the bill restrictions, so make sure bills are not assigned to someone else.
+If no pawns are assigned (default), then anybody can work the bench (default).
 
-Multiple pawns can be assigned at once.
+But if any pawns are assigned, then only those assigned pawns can work the bench.
+
+This works independently from the bill restrictions, so make sure bills are not assigned to someone else.
 
 # Links
 
