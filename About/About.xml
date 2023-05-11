@@ -3,11 +3,7 @@
   <name>AssignedWorkbenches</name>
   <author>Maarx</author>
   <url>https://github.com/maarxx/AssignedWorkbenches/</url>
-  <description>
-The mod adds the 'Set Owner' Gizmo (like from a Bed) onto all Workbenches.
-
-Pawns will not work on the bench unless they are assigned to it.
-  </description>
+  <description>The mod adds the 'Set Owner' Gizmo (like from a Bed) onto all Workbenches.</description>
   <packageId>maarx.assignedworkbenches</packageId>
   <supportedVersions>
     <li>1.4</li>
